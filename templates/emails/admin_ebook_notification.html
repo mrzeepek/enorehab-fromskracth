@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau téléchargement d'ebook - Enorehab</title>
+    <style type="text/css">
+        /* Styles de base pour les clients mail compatibles */
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+        }
+        /* Réinitialiser les styles */
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #f4f4f4;
+        }
+        /* Masquer les préheaders */
+        .preheader {
+            display: none !important;
+            visibility: hidden;
+            mso-hide: all;
+            font-size: 1px;
+            line-height: 1px;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        /* Styles pour les clients mobiles */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                max-width: 600px !important;
+            }
+            .responsive-table {
+                width: 100% !important;
+            }
+            .mobile-button {
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .mobile-center {
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; background-color: #f4f4f4;">
+<!-- Preheader Text -->
+<div class="preheader" style="display: none; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;">
+    Nouveau téléchargement de l'ebook "Épaul - Guide de mobilité"
+</div>
+
+<!-- Email Container -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; background-color: #f4f4f4;">
+    <tr>
+        <td align="center" valign="top">
+            <!-- Email Header -->
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="container" style="max-width: 600px; background-color: #000000; border-top: 3px solid #0ed0ff;">
+                <tr>
+                    <td align="center" valign="top" style="padding: 20px 0;">
+                        <img src="https://enorehab.fr/assets/img/logo-er.png" alt="Enorehab" width="100" style="display: block; border: 0px;">
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Email Body -->
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="container" style="max-width: 600px; background-color: #000000; color: #ffffff; font-family: Inter, Arial, sans-serif;">
+                <tr>
+                    <td align="center" valign="top" style="padding: 20px 30px; background-color: #111111;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 540px;">
+                            <tr>
+                                <td style="padding: 0 0 20px 0; font-family: Inter, Arial, sans-serif; font-size: 24px; font-weight: bold; color: #0ed0ff; text-align: center;">
+                                    Nouveau téléchargement d'ebook
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 0 20px 0; font-family: Inter, Arial, sans-serif; font-size: 16px; line-height: 24px; color: #ffffff; text-align: left;">
+                                    Une personne vient de télécharger l'ebook "Épaul - Guide de mobilité".
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Informations utilisateur -->
+                <tr>
+                    <td align="center" valign="top" style="padding: 0 30px 30px 30px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 540px;">
+                            <tr>
+                                <td style="padding: 20px 0; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: bold; color: #ffffff; text-align: left; border-bottom: 1px solid #333333;">
+                                    Informations de l'utilisateur
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px 0;">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td width="150" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                Nom
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #ffffff; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                {{NAME}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                Email
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #ffffff; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                {{EMAIL}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                Date
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #ffffff; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                {{DATE}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                IP
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #ffffff; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                {{IP}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                Consentement liste
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #ffffff; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                {{CONSENT}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                Enregistré en DB
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: {{DB_COLOR}}; text-align: left; padding: 5px 0; vertical-align: top;">
+                                                {{DB_SUCCESS}}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Statistiques -->
+                <tr>
+                    <td align="center" valign="top" style="padding: 0 30px 30px 30px; background-color: #111111;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 540px;">
+                            <tr>
+                                <td style="padding: 20px 0; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: bold; color: #ffffff; text-align: left; border-bottom: 1px solid #333333;">
+                                    Statistiques
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px 0 0 0;">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td width="200" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0;">
+                                                Total des téléchargements
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #0ed0ff; font-weight: bold; text-align: left; padding: 5px 0;">
+                                                {{TOTAL_DOWNLOADS}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="200" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0;">
+                                                Téléchargements aujourd'hui
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #0ed0ff; font-weight: bold; text-align: left; padding: 5px 0;">
+                                                {{TODAY_DOWNLOADS}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="200" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #999999; text-align: left; padding: 5px 0;">
+                                                Inscrits à la newsletter
+                                            </td>
+                                            <td style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #0ed0ff; font-weight: bold; text-align: left; padding: 5px 0;">
+                                                {{MAIL_LIST_COUNT}}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- CTA -->
+                <tr>
+                    <td align="center" valign="top" style="padding: 30px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center" style="padding-bottom: 20px;">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="center" style="border-radius: 8px; background-color: #0ed0ff;">
+                                                <a href="https://enorehab.fr/admin/ebook-subscribers.php" target="_blank" style="display: inline-block; padding: 15px 25px; font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 20px; text-decoration: none; color: #000000; border-radius: 8px;">
+                                                    Voir tous les abonnés
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Email Footer -->
+                <tr>
+                    <td align="center" valign="top" style="padding: 30px; background-color: #111111; border-top: 1px solid #333333;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center" style="font-family: Inter, Arial, sans-serif; font-size: 14px; line-height: 24px; color: #999999; text-align: center;">
+                                    © {{YEAR}} Enorehab. Tous droits réservés.
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

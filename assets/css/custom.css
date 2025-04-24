@@ -1,0 +1,290 @@
+/*
+ * Enorehab - Custom CSS
+ * 
+ * Styles personnalisés complémentaires à Tailwind CSS
+ * Contient les animations spéciales, ajustements typographiques et effets
+ */
+
+/* --------------------------------------------------------------
+  STYLES DE BASE ET TYPOGRAPHIE
+-------------------------------------------------------------- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+  
+  /* --------------------------------------------------------------
+    ANIMATIONS PERSONNALISÉES
+  -------------------------------------------------------------- */
+  
+  /* Pulse animation pour les boutons CTA */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(14, 208, 255, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(14, 208, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(14, 208, 255, 0);
+    }
+  }
+  
+  .pulse-animation {
+    animation: pulse 1s ease-in-out;
+  }
+  
+  /* Fade-in animation pour le H1 */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+  
+  /* Glowing effect pour les blocs de prix */
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px 0 rgba(14, 208, 255, 0.3); }
+    50% { box-shadow: 0 0 15px 3px rgba(14, 208, 255, 0.5); } /* Moins intense */
+    100% { box-shadow: 0 0 5px 0 rgba(14, 208, 255, 0.3); }
+  }
+
+  .reduce-animation,
+  .reduce-animation * {
+    animation-duration: 0.5s !important;
+    transition-duration: 0.3s !important;
+  }
+  #pricing .border-[#0ed0ff]:hover {
+    animation: glow 2s infinite;
+  }
+  
+  /* --------------------------------------------------------------
+    AJUSTEMENTS SPÉCIFIQUES POUR LES SECTIONS
+  -------------------------------------------------------------- */
+  
+  /* Hero Section */
+  #hero {
+    background-image: radial-gradient(circle at 70% 50%, rgba(14, 208, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  }
+  
+  /* Target Blocks avec effet hover */
+  .target-block {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .target-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px -5px rgba(14, 208, 255, 0.3);
+  }
+  
+  /* Story Section - image */
+  #story img {
+    box-shadow: 15px 15px 0 -5px #0ed0ff;
+  }
+  
+  /* Prix barré avec ligne dynamique */
+  .line-through {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .line-through::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff0000;
+    transform: rotate(-5deg);
+  }
+  
+  /* Formulaire avec focus glow */
+  input:focus {
+    box-shadow: 0 0 0 3px rgba(14, 208, 255, 0.3);
+  }
+  
+  /* --------------------------------------------------------------
+    STYLE SPÉCIAL POUR LE HEADER FLOTTANT
+  -------------------------------------------------------------- */
+  header {
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* --------------------------------------------------------------
+    AMÉLIORATIONS RESPONSIVES
+  -------------------------------------------------------------- */
+
+  /* Ajustements pour mobile */
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    #hero p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    #story img {
+      box-shadow: 10px 10px 0 -5px #0ed0ff;
+      margin: 0 auto 2rem auto; /* Centre et ajoute de l'espace en bas */
+    }
+
+    .target-block {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    /* CORRECTION: Animation de glow plus légère sur mobile */
+    #pricing .border-[#0ed0ff]:hover {
+    animation: glow 3s infinite;
+  }
+
+    /* CORRECTION: Animation fade-in moins intense sur mobile */
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+  }
+  
+  /* Ajustements pour tablettes */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    #hero {
+      min-height: 90vh;
+    }
+  }
+  
+  /* --------------------------------------------------------------
+    ACCESSIBILITÉ
+  -------------------------------------------------------------- */
+  
+  /* Focus styles pour accessibilité keyboard */
+  a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid #0ed0ff;
+    outline-offset: 2px;
+  }
+  
+  /* Skip to content link (hidden until focused) */
+  .skip-to-content {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: #0ed0ff;
+    color: #000000;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s ease;
+  }
+  
+  .skip-to-content:focus {
+    top: 0;
+  }
+  
+  /* --------------------------------------------------------------
+    ANIMATIONS DE DÉFILEMENT
+  -------------------------------------------------------------- */
+  
+  /* Classes d'animation utilisées par data-aos */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* --------------------------------------------------------------
+    PERSONNALISATION DE FORMULAIRE
+  -------------------------------------------------------------- */
+  
+  /* Message de succès */
+  .success-message {
+    background-color: rgba(14, 208, 255, 0.1);
+    border-left: 4px solid #0ed0ff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  /* Message d'erreur */
+  .error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-left: 4px solid #ff0000;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  /* --------------------------------------------------------------
+    EFFETS SPÉCIAUX
+  -------------------------------------------------------------- */
+  
+  /* Gradient texte pour titres spéciaux */
+  .gradient-text {
+    background: linear-gradient(90deg, #0ed0ff, #00b5e2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  /* Indice de réduction de prix */
+  .price-tag {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .price-tag::before {
+    content: '-40%';
+    position: absolute;
+    top: -24px;
+    right: -40px;
+    background: #ff3b3b;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: rotate(10deg);
+  }
+  
+  /* Ajout d'un marqueur soulignant pour les FAQ */
+  .faq-title {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .faq-title::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    background: #0ed0ff;
+    left: 0;
+    bottom: -8px;
+  }

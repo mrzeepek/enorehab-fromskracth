@@ -1,0 +1,25 @@
+[2025-04-18 22:16:59] [INFO] Début du traitement du formulaire | Context: {"ip":"::1"}
+[2025-04-18 22:16:59] [DEBUG] Données du formulaire reçues | Context: {"name":"test","email":"mdifazio.dev@gmail.com","phone":"000000000","instagram":"markodf"}
+[2025-04-18 22:16:59] [INFO] reCAPTCHA désactivé pour les tests locaux
+[2025-04-18 22:16:59] [INFO] Tentative de connexion à la base de données
+[2025-04-18 22:16:59] [ERROR] Erreur de base de données | Context: 
+[2025-04-18 22:16:59] [INFO] Préparation de l'envoi d'emails
+[2025-04-18 22:16:59] [DEBUG] Tentative d'envoi d'email à l'administrateur | Context: {"to":"enora.lenez@enorehab.fr"}
+[2025-04-18 22:17:02] [ERROR] Échec de l'envoi d'email à l'administrateur
+[2025-04-18 22:17:02] [DEBUG] Tentative d'envoi d'email au client | Context: {"to":"mdifazio.dev@gmail.com"}
+[2025-04-18 22:17:04] [ERROR] Échec de l'envoi d'email au client
+[2025-04-18 22:17:04] [ERROR] Échec complet: ni email ni base de données
+[2025-04-18 22:19:18] [ERROR] Diagnostic: Erreur de connexion à la base de données | Context: 
+[2025-04-23 20:36:11] [INFO] Accès à send_ebook.php | Context: {"method":"GET","ip":"2a01:cb1d:901e:9e00:2230:7564:45bf:3539"}
+[2025-04-23 20:36:11] [WARNING] Tentative d'accès direct à send_ebook.php | Context: {"ip":"2a01:cb1d:901e:9e00:2230:7564:45bf:3539"}
+[2025-04-23 20:36:23] [INFO] Accès à send_ebook.php | Context: {"method":"GET","ip":"2a01:cb1d:901e:9e00:2230:7564:45bf:3539"}
+[2025-04-23 20:36:23] [WARNING] Tentative d'accès direct à send_ebook.php | Context: {"ip":"2a01:cb1d:901e:9e00:2230:7564:45bf:3539"}
+[2025-04-23 20:36:37] [INFO] Accès à process_ebook.php | Context: {"method":"POST","ip":"2a01:cb1d:901e:9e00:2230:7564:45bf:3539"}
+[2025-04-23 20:36:37] [INFO] Tentative de connexion à la base de données
+[2025-04-23 20:36:37] [INFO] Abonné ebook existant, mise à jour | Context: {"email":"marko34ii@gmail.com"}
+[2025-04-23 20:36:37] [INFO] Tentative d'envoi de l'ebook par email | Context: {"to":"marko34ii@gmail.com","name":"GPTBot"}
+[2025-04-23 20:36:38] [INFO] Email ebook envoyé avec succès | Context: {"to":"marko34ii@gmail.com"}
+[2025-04-23 20:36:38] [ERROR] Template introuvable | Context: {"template":"admin_notification.html","checked_paths":["\/homepages\/24\/d4298658940\/htdocs\/enorehab_landing\/includes\/..\/templates\/emails\/admin_notification.html","\/homepages\/24\/d4298658940\/htdocs\/enorehab_landing\/includes\/..\/templates\/emails\/\/admin_notification.html","\/homepages\/24\/d4298658940\/htdocs\/enorehab_landing\/includes\/..\/templates\/emails\/admin_notification.html","\/homepages\/24\/d4298658940\/htdocs\/enorehab_landing\/includes\/..\/templates\/admin_notification.html"]}
+[2025-04-23 20:36:38] [ERROR] Erreur de template email | Context: {"message":"Le template admin_notification.html n'existe pas","template":"admin_notification.html"}
+[2025-04-23 20:51:13] [INFO] Accès à send_ebook.php | Context: {"method":"GET","ip":"2a01:cb1d:901e:9e00:2230:7564:45bf:3539"}
+[2025-04-23 20:51:18] [INFO] Accès à send_ebook.php | Context: {"method":"POST","ip":"2a01:cb1d:901e:9e00:2230:7564:45bf:3539"}
